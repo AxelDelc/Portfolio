@@ -804,9 +804,20 @@ footer {
     margin: 30px 0;
 }
 
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
 .gallery-item img {
     border-radius: 8px;
+    width: 100%;
     transition: var(--transition);
+    object-fit: cover;
+    display: block;
 }
 
 .gallery-item img:hover {
@@ -820,7 +831,7 @@ footer {
 
 .tech-breakdown {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
     gap: 30px;
     margin: 30px 0;
 }

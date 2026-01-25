@@ -33,14 +33,14 @@ if (filterButtons.length > 0) {
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             button.classList.add('active');
-            
+
             const filter = button.getAttribute('data-filter');
-            
+
             projectCards.forEach(card => {
                 const categories = card.getAttribute('data-category').split(' ');
-                
+
                 if (filter === 'all' || categories.includes(filter)) {
                     card.style.display = 'block';
                     setTimeout(() => {
@@ -65,12 +65,12 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
-        
+
         if (name && email && subject && message) {
             setTimeout(() => {
                 alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
@@ -87,7 +87,7 @@ if (document.querySelector('.hero-content')) {
     const typeWriter = (element, text, speed = 50) => {
         let i = 0;
         element.textContent = '';
-        
+
         const typing = setInterval(() => {
             if (i < text.length) {
                 element.textContent += text.charAt(i);
@@ -97,7 +97,7 @@ if (document.querySelector('.hero-content')) {
             }
         }, speed);
     };
-    
+
     window.addEventListener('load', () => {
         const heroTitle = document.querySelector('.hero h1');
         if (heroTitle) {
@@ -117,12 +117,12 @@ if (skillCards.length > 0) {
 
 // Scroll léger pour les ancres
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
@@ -131,4 +131,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+
+
+
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const galleryItems = document.querySelectorAll('.gallery-item');
+const closeLightbox = document.getElementById('closeLightbox');
+const prevImage = document.getElementById('prevImage');
+const nextImage = document.getElementById('nextImage');
+
+let currentIndex = 0;
+const images = Array.from(galleryItems).map(item => item.querySelector('img').src);
+
+galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        currentIndex = index;
+        showLightbox();
+    });
+});
+
+function showLightbox() {
+    lightbox.classList.add('active');
+    lightboxImage.src = images[currentIndex];
+    document.body.style.overflow = 'hidden';
+}
+
+function hideLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+closeLightbox.addEventListener('click', hideLightbox);
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        hideLightbox();
+    }
+});
+
+prevImage.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImage.src = images[currentIndex];
+});
+
+nextImage.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImage.src = images[currentIndex];
 });
