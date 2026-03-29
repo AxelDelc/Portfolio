@@ -1,0 +1,26 @@
+.education {
+    padding: 100px 0;
+    background-color: var(--background-color);
+}
+
+.education-item {
+    display: flex;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: var(--header);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.education-year {
+    min-width: 200px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.education-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}

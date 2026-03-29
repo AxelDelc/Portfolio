@@ -1,0 +1,165 @@
+@media (max-width: 992px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .education-item {
+        flex-direction: column;
+    }
+
+    .education-year {
+        margin-bottom: 15px;
+    }
+
+    .project-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .footer-content {
+        display: grid;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .hero {
+        height: 90vh;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        background-color: var(--background-color);
+        padding: 40px 0;
+        transition: var(--transition);
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .timeline-item {
+        padding-left: 80px;
+    }
+
+    .timeline-date {
+        width: 60px;
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .project-overview,
+    .project-description {
+        padding: 25px;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .tech-breakdown {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+
+    .about-card,
+    .skill-card,
+    .project-card,
+    .contact-info,
+    .contact-form {
+        padding: 20px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-description h2 {
+        font-size: 1.6rem;
+    }
+
+    .project-description h3 {
+        font-size: 1.3rem;
+    }
+
+    .timeline-content {
+        padding: 10px;
+    }
+
+    .footer-content {
+        display: grid;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
