@@ -4,33 +4,50 @@
 
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 48px 36px;
 }
 
-.skill h3 {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+/* Subgrid gives every group title the same height, so the saffron rules stay aligned
+   even when one title wraps onto two lines */
+.skill-group {
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+}
+
+.skill-group h3 {
+    align-self: end;
     font-family: var(--font-display);
     font-weight: 800;
     font-size: 1.9rem;
     line-height: 1;
     padding-bottom: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     border-bottom: 4px solid var(--saffron);
 }
 
-.skill-icons {
-    display: flex;
-    gap: 8px;
-    font-size: 1.6rem;
-    color: var(--saffron);
+.skill-list {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    align-content: start;
 }
 
-.skill p {
-    color: var(--sage);
-    font-size: 1rem;
+.skill-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.skill-list i {
+    width: 1.6rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--saffron);
 }
 
 @media (max-width: 860px) {
