@@ -1,75 +1,43 @@
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--header);
-    box-shadow: var(--box-shadow);
-    padding: 15px 0;
-}
-
-header .container {
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
+    padding-block: 22px;
+    border-bottom: 2px solid var(--line);
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--saffron);
+    text-decoration: none;
 }
 
-nav ul {
+.site-header nav {
     display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+    flex-wrap: wrap;
+    gap: 8px 28px;
     font-weight: 500;
-    transition: var(--transition);
-    position: relative;
-    padding: 5px 0;
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: var(--transition);
+.site-header nav a {
+    text-decoration: none;
 }
 
-nav ul li a:hover::after,
-nav ul li a.active::after {
-    width: 100%;
+.site-header nav a:hover {
+    color: var(--saffron);
 }
 
-nav ul li a.active {
-    color: var(--primary-color);
-}
+@media (max-width: 560px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 5px 0;
-    transition: var(--transition);
+    .site-header nav {
+        gap: 8px 18px;
+    }
 }

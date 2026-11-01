@@ -1,129 +1,122 @@
-/* Page header (projets.html, contact.html) */
-.page-header {
-    padding: 150px 0 80px;
-    text-align: center;
-    background: var(--background-color);
-}
-
-.page-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.page-header p {
-    font-size: 1.2rem;
-    color: var(--dark-gray);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Liste des projets */
 .projects {
-    padding: 100px 0;
+    background: var(--eerie);
 }
 
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.filter-btn {
-    padding: 8px 20px;
-    margin: 0 10px 10px;
-    border: none;
-    background-color: transparent;
-    color: var(--light-gray);
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-    border-radius: 30px;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.projects-grid {
+/* Projects alternate either side of a dashed net, like a table-tennis rally */
+.rally {
+    position: relative;
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
+    gap: 72px;
 }
 
-.project-card {
-    background-color: var(--background-color);
-    border-radius: 10px;
+.rally::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    border-left: 3px dashed var(--sage);
+    opacity: .3;
+}
+
+.shot {
+    position: relative;
+    width: calc(50% - 48px);
+}
+
+.shot:nth-child(even) {
+    margin-left: auto;
+}
+
+.shot::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: -55px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--saffron);
+}
+
+.shot:nth-child(even)::after {
+    right: auto;
+    left: -55px;
+}
+
+.shot-thumb {
+    display: block;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
+    border-radius: 6px;
+    background: var(--jet);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.project-img {
-    height: 200px;
-    overflow: hidden;
-}
-
-.project-img img {
+.shot-thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    object-position: top;
+    transition: transform .4s ease;
 }
 
-.project-card:hover .project-img img {
-    transform: scale(1.1);
+.shot-thumb:hover img {
+    transform: scale(1.04);
 }
 
-.project-info {
-    padding: 25px;
+.shot-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+    font-size: .92rem;
+    color: var(--muted);
 }
 
-.project-info h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+.shot h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    line-height: 1;
+    margin: 6px 0 10px;
 }
 
-.project-info p {
-    margin-bottom: 15px;
-    color: var(--dark-gray);
+.shot p {
+    color: var(--sage);
+    max-width: 52ch;
 }
 
-.project-tags {
+.shot-links {
+    margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 8px 20px;
+    font-weight: 700;
 }
 
-.project-tags span {
-    padding: 5px 15px;
-    background-color: var(--header);
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
+.shot-links a {
+    text-underline-offset: 4px;
 }
 
-.project-link {
-    color: var(--primary-color);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
+.shot-links a:hover {
+    color: var(--saffron);
 }
 
-.project-link i {
-    margin-left: 5px;
-    transition: var(--transition);
+@media (max-width: 860px) {
+    .rally::before,
+    .shot::after {
+        display: none;
+    }
+
+    .shot {
+        width: 100%;
+    }
 }
 
-.project-link:hover i {
-    transform: translateX(5px);
+@media (prefers-reduced-motion: reduce) {
+    .shot-thumb img {
+        transition: none;
+    }
 }

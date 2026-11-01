@@ -1,50 +1,43 @@
-.about {
-    padding: 100px 0;
-    background-color: var(--background-color);
+/* Shared two-column layout: title on the left, text on the right.
+   Used by the home "À propos" section and the project page body. */
+.split {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+    border-top: 2px solid var(--line);
 }
 
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
+.split > .section-title {
+    grid-column: 1 / 6;
 }
 
-.about-text {
-    flex: 1;
+.split > .text {
+    grid-column: 6 / 12;
+    max-width: 62ch;
+    color: var(--sage);
 }
 
-.about-text p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+.split > .text p + p {
+    margin-top: 1em;
 }
 
-.about-card {
-    flex: 1;
-    background-color: var(--header);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
+.drop-cap > p:first-child::first-letter {
+    float: left;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 5.6rem;
+    line-height: .8;
+    padding: 6px 12px 0 0;
+    color: var(--saffron);
 }
 
-.about-card:hover {
-    transform: translateY(-10px);
-}
+@media (max-width: 860px) {
+    .split {
+        grid-template-columns: minmax(0, 1fr);
+    }
 
-.card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.card-header i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-right: 20px;
-}
-
-.card-header h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    .split > .section-title,
+    .split > .text {
+        grid-column: 1 / -1;
+    }
 }

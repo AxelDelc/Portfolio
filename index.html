@@ -5,202 +5,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Axel Delcroix | Développeur Web</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Portfolio d'Axel Delcroix, développeur web en alternance à Lille : projets, parcours et compétences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div id="header-placeholder"></div>
+    <div class="wrap">
+        <header class="site-header">
+            <a class="logo" href="index.html" aria-label="Axel Delcroix, accueil">AD</a>
+            <nav aria-label="Navigation principale">
+                <a href="#projets">Projets</a>
+                <a href="#parcours">Parcours</a>
+                <a href="#competences">Compétences</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Axel Delcroix</h1>
-                <h2>Développeur Web</h2>
-                <p>Étudiant passionné par la création d'expériences web innovantes</p>
-                <div class="cta-buttons">
-                    <a href="projets.html" class="btn primary">Voir mes projets</a>
-                    <a href="contact.html" class="btn secondary">Me contacter</a>
-                </div>
+        <section class="hero" aria-label="Présentation">
+            <h1>
+                <span class="riso" data-text="Axel">Axel</span>
+                <span class="riso" data-text="Delcroix">Delcroix</span>
+            </h1>
+            <p class="hero-lede"><strong>Développeur web à Lille</strong>, 21 ans, en alternance en troisième année de Bachelor. Curieux depuis le lycée, j'aime le développement web pour sa part de créativité.</p>
+            <a class="cv-stamp" href="assets/CV%20Axel%20DELCROIX.pdf" download>Télécharger<br>mon CV</a>
+        </section>
+
+        <section class="split" aria-labelledby="about-title">
+            <h2 class="section-title" id="about-title">À propos</h2>
+            <div class="text drop-cap">
+                <p>Je m'appelle Axel Delcroix, j'ai 21 ans et je suis étudiant à Lille dans le but de devenir développeur web. Je suis curieux, motivé et j'aime découvrir de nouvelles choses dans les domaines qui m'intéressent.</p>
+                <p>Depuis le lycée, je m'intéresse beaucoup à l'informatique et aux différents langages de programmation. C'est pourquoi j'aimerais travailler dans ce domaine, et plus particulièrement dans le développement web, qui m'attire le plus pour sa créativité.</p>
             </div>
+        </section>
+    </div>
+
+    <section class="projects" id="projets" aria-labelledby="projects-title">
+        <div class="wrap">
+            <h2 class="section-title" id="projects-title">Projets</h2>
+            <ol class="rally">
+                <li class="shot">
+                    <a class="shot-thumb" href="projects/pages/photographe.html"><img src="assets/images/site%20sebastien%201.png" alt="Site du photographe Sébastien Courdji"></a>
+                    <div class="shot-meta"><span>Projet indépendant</span><span>HTML, CSS, JavaScript</span></div>
+                    <h3>Site pour photographe</h3>
+                    <p>Un site vitrine sans framework, mis en ligne de bout en bout : SEO, images optimisées, domaine personnalisé et HTTPS sur GitHub Pages, RGPD.</p>
+                    <div class="shot-links">
+                        <a href="projects/pages/photographe.html">Détails du projet</a>
+                        <a href="https://xn--sbastien-courdji-photographe-brc.fr/" target="_blank" rel="noopener">Voir le site</a>
+                        <a href="https://github.com/AxelDelc/AxelDelc.github.io" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </li>
+                <li class="shot">
+                    <a class="shot-thumb" href="projects/pages/BM_project.html"><img src="assets/images/ImageDocV1.png" alt="Boutique en ligne Docteur V"></a>
+                    <div class="shot-meta"><span>Stage Biologist Mood, 2025</span><span>Shopify, Liquid</span></div>
+                    <h3>Docteur V</h3>
+                    <p>Un site e-commerce créé de zéro sur Shopify pour un produit unique, le Morofit 400, et mis en conformité avec Google Ads.</p>
+                    <div class="shot-links">
+                        <a href="projects/pages/BM_project.html">Détails du projet</a>
+                        <a href="https://docteurv.fr/" target="_blank" rel="noopener">Voir le site</a>
+                    </div>
+                </li>
+                <li class="shot">
+                    <a class="shot-thumb" href="projects/pages/chatbot_project.html"><img src="assets/images/projet%20chatbot.png" alt="Interface du chatbot"></a>
+                    <div class="shot-meta"><span>Cours de JavaScript, 2e année</span><span>JavaScript, API Gemini</span></div>
+                    <h3>ChatBot</h3>
+                    <p>Un chatbot qui répond au texte et analyse les images grâce à l'API Gemini 1.5 Flash, avec des requêtes asynchrones fluides.</p>
+                    <div class="shot-links">
+                        <a href="projects/pages/chatbot_project.html">Détails du projet</a>
+                        <a href="https://github.com/AxelDelc/ChatBot" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </li>
+                <li class="shot">
+                    <a class="shot-thumb" href="projects/pages/spotify.html"><img src="assets/images/spotify%201.png" alt="Interface du projet Spotify"></a>
+                    <div class="shot-meta"><span>Partiels 2e année</span><span>Node.js, MySQL</span></div>
+                    <h3>Spotify</h3>
+                    <p>Spotify recréé en trois jours, avec un Mix Intelligent et des Défis Musicaux pour découvrir de nouveaux morceaux.</p>
+                    <div class="shot-links">
+                        <a href="projects/pages/spotify.html">Détails du projet</a>
+                        <a href="https://github.com/AxelDelc/Spotify_en_mieux" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </li>
+                <li class="shot">
+                    <a class="shot-thumb" href="projects/pages/projet_sfr.html"><img src="assets/images/photo2%20SFR.png" alt="Page d'accueil SFR refaite sous WordPress"></a>
+                    <div class="shot-meta"><span>Stage Astek, 2024</span><span>WordPress, PHP</span></div>
+                    <h3>SFR</h3>
+                    <p>La page d'accueil de SFR reconstruite dans un thème WordPress sur mesure, pour tester si le CMS convenait à leur refonte.</p>
+                    <div class="shot-links">
+                        <a href="projects/pages/projet_sfr.html">Détails du projet</a>
+                        <a href="https://github.com/AxelDelc/SFRwordPress" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </li>
+                <li class="shot">
+                    <a class="shot-thumb" href="projects/pages/HellFireFest_project.html"><img src="assets/images/Flyer_Axel_Delcroix.jpg" alt="Flyers du HellFire Fest"></a>
+                    <div class="shot-meta"><span>Design graphique, 1re année</span><span>Illustrator, Photoshop</span></div>
+                    <h3>HellFire Fest</h3>
+                    <p>La campagne complète d'un festival de métal imaginaire : logo, affiche, flyers et canette de boisson énergisante.</p>
+                    <div class="shot-links">
+                        <a href="projects/pages/HellFireFest_project.html">Détails du projet</a>
+                    </div>
+                </li>
+                <li class="shot">
+                    <a class="shot-thumb" href="projects/pages/pong_project.html"><img src="assets/images/photo%20projet%20pong.png" alt="Partie du jeu Pong"></a>
+                    <div class="shot-meta"><span>Classes préparatoires</span><span>JavaScript, Canvas</span></div>
+                    <h3>Pong</h3>
+                    <p>Une réplique du Pong à deux joueurs : raquettes au clavier, collisions et animation dessinées dans un canvas HTML5.</p>
+                    <div class="shot-links">
+                        <a href="projects/pages/pong_project.html">Détails du projet</a>
+                        <a href="https://github.com/AxelDelc/Pong-Project" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </li>
+            </ol>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Je m'appelle Axel Delcroix, j'ai 21 ans et je suis étudiant à Lille dans le but de devenir
-                        Développeur Web. Je suis curieux, motivé et j'aime découvrir de nouvelles choses dans
-                        les domaines qui m'intéressent.</p>
-                    <p>Depuis le lycée, je m'intéresse beaucoup à l'informatique et aux différents langages de
-                        programmation, c'est pourquoi j'aimerais pouvoir travailler dans ce domaine et plus
-                        particulièrement dans le développement Web, qui est le domaine qui m'intéresse le plus pour sa
-                        créativité.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Développeur Web</h3>
+    <div class="wrap">
+        <section id="parcours" aria-labelledby="xp-title">
+            <h2 class="section-title" id="xp-title">Parcours</h2>
+            <ol class="timeline">
+                <li>
+                    <span class="year">2025–26</span>
+                    <div>
+                        <h3>Alternance, cabinet d'avocat Caroline Arnoux</h3>
+                        <p class="place">Lille</p>
+                        <p>Troisième année de Bachelor Développement Web. Je travaille sur la refonte complète du site du cabinet et sur une application web de gestion de fichiers et d'emploi du temps pour avocat.</p>
                     </div>
-                    <p>Passionné par la création de solutions web innovantes et fonctionnelles</p>
+                </li>
+                <li>
+                    <span class="year">2025</span>
+                    <div>
+                        <h3>Stage, Biologist Mood</h3>
+                        <p class="place">Tourcoing</p>
+                        <p>Deux mois dans une startup de soins capillaires naturels : refonte du site e-commerce sur Shopify, création du site de leur deuxième marque, Docteur V, et pages sur mesure en HTML, CSS et Liquid.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="year">2024</span>
+                    <div>
+                        <h3>Stage, agence Astek</h3>
+                        <p class="place">Lille</p>
+                        <p>Un thème WordPress sur mesure pour rendre administrable la page d'accueil de SFR, et un dashboard en React JS pour Siemens qui suit les données d'une ligne du réseau RATP.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="year">2019</span>
+                    <div>
+                        <h3>Stage d'observation, agence Tribu</h3>
+                        <p class="place">Roubaix</p>
+                        <p>Une semaine dans une agence de communication digitale. C'est là que j'ai découvert le graphisme et le HTML/CSS, et que j'ai eu envie d'en faire mon métier.</p>
+                    </div>
+                </li>
+            </ol>
+
+            <h3 class="timeline-subtitle">Formations</h3>
+            <ol class="timeline education">
+                <li>
+                    <span class="year">2023–auj.</span>
+                    <div>
+                        <h3>Bachelor Cycle Web &amp; Multimédia</h3>
+                        <p class="place">MyDigitalSchool, Lille</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="year">2022–23</span>
+                    <div>
+                        <h3>Classes préparatoires ingénieur informatique</h3>
+                        <p class="place">ISEN, Caen</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="year">2019–22</span>
+                    <div>
+                        <h3>Baccalauréat général, mathématiques et sciences de l'ingénieur</h3>
+                        <p class="place">Lycée Saint Jude, Armentières</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="skills" id="competences" aria-labelledby="skills-title">
+            <h2 class="section-title" id="skills-title">Compétences</h2>
+            <div class="skill-grid">
+                <div class="skill">
+                    <h3><span class="skill-icons" aria-hidden="true"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i></span>HTML &amp; CSS</h3>
+                    <p>Des structures web bien définies en HTML et une esthétique soignée en CSS, pour une expérience fluide et agréable.</p>
                 </div>
+                <div class="skill">
+                    <h3><span class="skill-icons" aria-hidden="true"><i class="fab fa-js"></i></span>JavaScript</h3>
+                    <p>L'interactivité de mes projets, du jeu Pong au chatbot connecté à une API.</p>
+                </div>
+                <div class="skill">
+                    <h3><span class="skill-icons" aria-hidden="true"><i class="fab fa-react"></i></span>React JS</h3>
+                    <p>Des interfaces dynamiques, dont un dashboard de suivi de données pour Siemens pendant mon stage chez Astek.</p>
+                </div>
+                <div class="skill">
+                    <h3><span class="skill-icons" aria-hidden="true"><i class="fab fa-wordpress"></i><i class="fab fa-shopify"></i></span>WordPress &amp; Shopify</h3>
+                    <p>Pour livrer plus vite les sites qui s'y prêtent, avec des thèmes et des sections sur mesure quand il le faut.</p>
+                </div>
+                <div class="skill">
+                    <h3><span class="skill-icons" aria-hidden="true"><i class="fab fa-node-js"></i><i class="fas fa-database"></i></span>Node.js &amp; MySQL</h3>
+                    <p>Le back-end de mes projets : données, sessions et logique serveur.</p>
+                </div>
+                <div class="skill">
+                    <h3><span class="skill-icons" aria-hidden="true"><i class="fab fa-figma"></i></span>Figma</h3>
+                    <p>La conception d'interfaces, nourrie par mon goût pour le visuel et l'expérience utilisateur.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer" id="contact" aria-labelledby="contact-title">
+        <div class="wrap">
+            <h2 class="section-title" id="contact-title">Discutons de votre projet</h2>
+            <a class="footer-mail" href="mailto:delcroixaxel2004@gmail.com">delcroixaxel2004@gmail.com</a>
+            <div class="footer-details">
+                <a href="tel:+33786703580"><i class="fas fa-phone" aria-hidden="true"></i>+33 7 86 70 35 80</a>
+                <span><i class="fas fa-location-dot" aria-hidden="true"></i>Lille</span>
+                <a href="https://www.linkedin.com/in/axel-delcroix/" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+                <a href="https://github.com/AxelDelc" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+                <a href="assets/CV%20Axel%20DELCROIX.pdf" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i>CV en PDF</a>
+            </div>
+            <div class="colophon">
+                <span>© 2026 Axel Delcroix</span>
+                <span>Développeur web, Lille</span>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Mes expériences</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2025-2026</div>
-                    <div class="timeline-content">
-                        <h3>Alternance - Cabinet d'avocat Caroline Arnoux</h3>
-                        <p class="location">Lille</p>
-                        <p>Alternance en troisième année de Bachelor Développement Web. Je travaille actuellement sur
-                            la refonte complète du site web du cabinet d'avocat ainsi que sur la création d'une
-                            application web de gestion de fichiers et d'emploi du temps pour avocat.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <h3>Stage - Biologist Mood</h3>
-                        <p class="location">Tourcoing</p>
-                        <p>Biologist Mood, une startup française spécialisée dans les soins capillaires naturels.
-                            Stage pratique de deux mois durant lequel j'ai participé à la refonte complète du site
-                            e-commerce de la marque sur Shopify, avec pour mission principale de
-                            concevoir un site e-commerce pour leur deuxième marque, Docteur V. J'ai également créé et
-                            intégré des pages personnalisées (HTML, CSS, Liquid) afin d'améliorer l'ergonomie et la
-                            présentation des produits.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>Stage - Agence Astek</h3>
-                        <p class="location">Lille</p>
-                        <p>Stage pratique de deux mois en première année de Bachelor. J'ai conçu et développé un thème
-                            WordPress sur mesure afin de rendre la page d'accueil administrable pour SFR, ainsi qu'un
-                            dashboard réalisé avec React JS pour Siemens, permettant le suivi de données d'une des
-                            lignes du réseau RATP.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019</div>
-                    <div class="timeline-content">
-                        <h3>Stage d'observation - Agence Tribu</h3>
-                        <p class="location">Roubaix</p>
-                        <p>Stage d'une semaine dans l'agence Tribu, une agence de communication dans le digital. C'est
-                            lors de ce stage que j'ai appris à connaître le graphisme et le développement HTML/CSS et
-                            c'est également lors de ce stage que j'ai développé un intérêt particulier pour ces deux
-                            domaines.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Mes formations</h2>
-            <div class="education-item">
-                <div class="education-year">2023 - Aujourd'hui</div>
-                <div class="education-content">
-                    <h3>Bachelor Cycle Web & Multimédia</h3>
-                    <p class="location">MyDigitalSchool, Lille</p>
-                </div>
-            </div>
-            <div class="education-item">
-                <div class="education-year">2022 - 2023</div>
-                <div class="education-content">
-                    <h3>Classes préparatoires Ingénieur informatique</h3>
-                    <p class="location">Isen, Caen</p>
-                </div>
-            </div>
-            <div class="education-item">
-                <div class="education-year">2019-2022</div>
-                <div class="education-content">
-                    <h3>Baccalauréat Général mathématiques/sciences de l'ingénieur</h3>
-                    <p class="location">Lycée Saint Jude, Armentières</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container-skill">
-            <h2 class="section-title">Mes compétences</h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>HTML & CSS</h3>
-                    <p>Bonne maîtrise des fondamentaux du développement web. Je crée des structures web bien définies
-                        avec HTML et j'apporte une esthétique soignée grâce à CSS, assurant une expérience utilisateur
-                        fluide et visuellement attractive.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <h3>JavaScript</h3>
-                    <p>Maîtrise de JavaScript pour apporter une interactivité dynamique à mes projets, offrant ainsi des
-                        expériences utilisateur riches et engageantes.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <h3>React JS</h3>
-                    <p>Développement d'interfaces dynamiques avec React JS, notamment lors de la création d'un
-                        dashboard de suivi de données pour Siemens durant mon stage chez Astek.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-terminal"></i>
-                    </div>
-                    <h3>WordPress / Shopify</h3>
-                    <p>Bonne maîtrise des CMS WordPress et Shopify qui me permettent de réaliser de petits sites Web
-                        plus simplement et rapidement lorsque c'est nécéssaire.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <h3>Node.js / MySQL</h3>
-                    <p>Utilisation de Node.js et MySQL pour le développement back-end de mes projets, notamment pour
-                        gérer les données et la logique serveur.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-figma"></i>
-                    </div>
-                    <h3>Figma</h3>
-                    <p>Expertise dans l'utilisation de Figma pour la conception d'interfaces utilisateur. Ma maîtrise
-                        est le fruit de ma passion pour l'aspect visuel et l'expérience utilisateur dans le domaine du
-                        développement web.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <h2>Vous souhaitez en savoir plus ?</h2>
-            <p>Téléchargez mon CV complet pour découvrir mon parcours en détail</p>
-            <a href="assets/CV Axel DELCROIX.pdf" class="btn primary" target="_blank">Télécharger mon CV</a>
-        </div>
-    </section>
-
-    <div id="footer-placeholder"></div>
-
-    <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
